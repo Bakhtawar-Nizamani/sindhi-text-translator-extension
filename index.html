@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindhi Translator - AI-Powered Translation</title>
+    <meta name="description" content="Translate text to Sindhi language using AI. Free online translator with RTL support and modern interface.">
+    <meta name="keywords" content="Sindhi translator, AI translation, Sindhi language, RTL text, online translator">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sindhi Translator - AI-Powered Translation">
+    <meta property="og:description" content="Translate text to Sindhi language using AI. Free online translator with RTL support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">س</div>
+                    <div class="brand">
+                        <h1 class="brand-title">Sindhi Translator</h1>
+                        <p class="brand-subtitle">AI-Powered Translation</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Translate to Sindhi with AI</h2>
+                <p class="hero-description">
+                    Experience seamless translation to Sindhi language with our AI-powered translator. 
+                    Features proper RTL text support and modern interface design.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">AI-Powered</span>
+                        <span class="stat-label">Translation Engine</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">RTL</span>
+                        <span class="stat-label">Text Support</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Free</span>
+                        <span class="stat-label">To Use</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Translator -->
+    <section class="translator-section">
+        <div class="container">
+            <div class="translator-container">
+                <div class="translator-header">
+                    <h3 class="translator-title">Text Translator</h3>
+                    <div class="language-indicator">
+                        <span class="lang-from">English</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7,7 17,7 17,17"></polyline>
+                        </svg>
+                        <span class="lang-to">Sindhi</span>
+                    </div>
+                </div>
+
+                <div class="translator-body">
+                    <div class="input-section">
+                        <div class="input-header">
+                            <label for="input-text" class="input-label">Enter text to translate</label>
+                            <div class="input-actions">
+                                <button class="action-btn" id="clear-btn" title="Clear text">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                                <button class="action-btn" id="paste-btn" title="Paste text">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <textarea 
+                            id="input-text" 
+                            class="text-input" 
+                            placeholder="Type or paste your text here..."
+                            rows="6"
+                        ></textarea>
+                        <div class="input-footer">
+                            <span class="char-count" id="char-count">0 characters</span>
+                            <button class="translate-btn" id="translate-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 0 1 6.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                                </svg>
+                                Translate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="output-header">
+                            <label class="output-label">
+                                Sindhi Translation
+                                <span class="rtl-badge">RTL</span>
+                            </label>
+                            <div class="output-actions">
+                                <button class="action-btn" id="copy-btn" title="Copy translation">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                                <button class="action-btn" id="speak-btn" title="Listen to pronunciation">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="output-text" class="text-output sindhi-text" dir="rtl">
+                            <div class="placeholder-content">
+                                <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 0 1 6.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                                </svg>
+                                <p>Translation will appear here</p>
+                                <span>Enter text above and click translate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Phrases -->
+                <div class="quick-phrases">
+                    <h4 class="phrases-title">Quick Phrases</h4>
+                    <div class="phrases-grid">
+                        <button class="phrase-btn" data-text="Hello">Hello</button>
+                        <button class="phrase-btn" data-text="Thank you">Thank you</button>
+                        <button class="phrase-btn" data-text="Good morning">Good morning</button>
+                        <button class="phrase-btn" data-text="How are you">How are you?</button>
+                        <button class="phrase-btn" data-text="Welcome">Welcome</button>
+                        <button class="phrase-btn" data-text="Please">Please</button>
+                        <button class="phrase-btn" data-text="Excuse me">Excuse me</button>
+                        <button class="phrase-btn" data-text="I love you">I love you</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Our Translator?</h2>
+                <p class="section-description">
+                    Advanced features designed for accurate and efficient Sindhi translation
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="9"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI-Powered</h3>
+                    <p class="feature-description">
+                        Uses advanced AI models for accurate and contextual translations
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M8 3L4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">RTL Support</h3>
+                    <p class="feature-description">
+                        Proper right-to-left text display for authentic Sindhi script rendering
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fast & Reliable</h3>
+                    <p class="feature-description">
+                        Quick translations with high accuracy and consistent performance
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="9" cy="9" r="2"/>
+                            <path d="M21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Modern Interface</h3>
+                    <p class="feature-description">
+                        Clean, responsive design that works perfectly on all devices
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Easy Copy</h3>
+                    <p class="feature-description">
+                        One-click copy functionality to easily share your translations
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-description">
+                        Your text is processed securely with no data storage or tracking
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">About Sindhi Translator</h2>
+                    <p class="about-description">
+                        Our Sindhi Translator is a modern web application designed to bridge language barriers 
+                        and make Sindhi language more accessible to everyone. Built with cutting-edge AI technology, 
+                        it provides accurate translations while respecting the cultural and linguistic nuances of 
+                        the Sindhi language.
+                    </p>
+                    <p class="about-description">
+                        Whether you're learning Sindhi, communicating with Sindhi speakers, or exploring the rich 
+                        cultural heritage of the Sindhi language, our translator provides a reliable and user-friendly 
+                        solution for all your translation needs.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <span class="feature-number">100%</span>
+                            <span class="feature-text">Free to Use</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-number">24/7</span>
+                            <span class="feature-text">Available</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-number">AI</span>
+                            <span class="feature-text">Powered</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="visual-content">
+                            <h3 class="visual-title">سنڌي ٻولي</h3>
+                            <p class="visual-subtitle">Sindhi Language</p>
+                            <div class="visual-stats">
+                                <div class="visual-stat">
+                                    <span class="stat-value">25M+</span>
+                                    <span class="stat-label">Speakers</span>
+                                </div>
+                                <div class="visual-stat">
+                                    <span class="stat-value">RTL</span>
+                                    <span class="stat-label">Script</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="footer-logo">س</div>
+                        <div class="footer-info">
+                            <h3 class="footer-title">Sindhi Translator</h3>
+                            <p class="footer-description">AI-powered translation for the Sindhi language</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Features</h4>
+                    <ul class="footer-links">
+                        <li><a href="#translator">Text Translation</a></li>
+                        <li><a href="#features">AI Technology</a></li>
+                        <li><a href="#features">RTL Support</a></li>
+                        <li><a href="#features">Quick Phrases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Connect</h4>
+                    <p class="footer-text">
+                        Experience the power of AI-driven Sindhi translation. 
+                        Start translating today!
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Sindhi Translator. Built with ❤️ for the Sindhi community.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Translating...</p>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification" style="display: none;">
+        <div class="notification-content">
+            <span class="notification-text"></span>
+            <button class="notification-close">×</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
